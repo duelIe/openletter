@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Open Letter</title>
+        <link rel="stylesheet" href="Letter.css">
+    </head>
+    <body>
+        <div class="countdown" id="countdown">3</div>
+
+    <script>
+        let count = 3;
+        let countdownElement = document.getElementById("countdown");
+
+        let countdownInterval = setInterval(() => {
+            count--;
+
+            if (count > 0) {
+                countdownElement.innerText = count;
+            } else {
+                countdownElement.innerText = "Start!";
+                countdownElement.classList.add("small"); 
+                clearInterval(countdownInterval);
+
+                //punta sa next page after 1 second
+                setTimeout(() => {
+                    window.location.href = "search.html"; //going to next page
+                }, 1000);
+            }
+        }, 1000);
+        </script>
+    </body>
+</html>
