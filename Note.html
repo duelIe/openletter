@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note for My Wife</title>
+    <link rel="stylesheet" href="note.css">
+</head>
+<body>
+
+    <div class="note">
+        <h3>No matter how you're feeling today, <br>you are never alone. I promise.</h3>
+        <button class="open-btn" data-modal="mod1">Open when you are mad</button>
+        <button class="open-btn" data-modal="mod2">Open when you are happy</button>
+        <button class="open-btn" data-modal="mod3">Open when you feel down</button>
+        <button class="open-btn" data-modal="mod4">Open when you are scared</button>
+        <button class="open-btn" data-modal="mod5">Open when you are nervous</button>
+        <button class="back">Back</button>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="mod1" class="modal">
+        <div class="content">
+            <span class="close">&times;</span>
+            <p>Alam mo, nakakatawa kapag galit ka kasi parang anytime may lalabas na usok sa tenga at ilong mo😆<br><br>
+                But kidding aside, if I'm the reason you're mad, I'm truly sorry. I may not be perfect, but I love you with all my heart.<br><br>                
+                Pero pag iba ang rason nyang galit mo, halika pupuntahan natin tapos sasapakin natin yan!!!🤬</p>
+        </div>
+    </div>
+
+    <div id="mod2" class="modal">
+        <div class="content">
+            <span class="close">&times;</span>
+            <p><br>Your happiness is my happiness! One of my favorite things in life is seeing you smile. Remember that you deserve every 
+                bit of happiness that comes your way, so savor the now and feel the delight. I will always be available to share in your 
+                life's celebrations💖 <span class="notetext">[Note: You're at your prettiest when you smile 🥰💓]</span></p>
+        </div>
+    </div>
+
+    <div id="mod3" class="modal">
+        <div class="content">
+            <span class="close">&times;</span>
+            <p><br>Kawawa naman abunjing bunjing ko na yan☹️<br><br>
+                I understand that there are days when you feel down, 
+                but know that you are more loved, appreciated, and treasured than words can say. 
+                It makes me sad to know you're feeling like this. Whatever you are going through, I'm always here to support you. 
+                Nothing will ever have to be faced by you alone, and you are never alone.</p>
+        </div>
+    </div>
+
+    <div id="mod4" class="modal">
+        <div class="content">
+            <span class="close">&times;</span>
+            <p><br>I will always love and support you, even if you are afraid. Don't worry about anything; you're not alone. You underestimate your own strength, and I have faith in you. I'll always be there for you, so you can rely on me anytime you need me.🥰</p>
+        </div>
+    </div>
+    <div id="mod5" class="modal">
+        <div class="content">
+            <span class="close">&times;</span>
+            <p>My love, take a big breath. You are more capable than you think, and you have prepared for this. You are already wonderful, regardless of the result. Everything will work out if you have the same level of confidence in yourself as I have. Fighting!😘</p>
+            </div>
+    </div>
+
+    <script>
+        // Open modal when clicking a button
+        document.querySelectorAll('.open-btn').forEach(button => {
+        button.addEventListener('click', function() {
+        var modalId = this.getAttribute('data-modal');
+        document.getElementById(modalId).style.display = "flex"; // Ensure it opens properly
+            });
+        });
+
+        document.querySelectorAll('.close').forEach(closeBtn => {
+        closeBtn.addEventListener('click', function() {
+        this.closest('.modal').style.display = "none";
+             });
+        });
+
+        window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) {
+        event.target.style.display = "none";
+            }
+        };
+    </script>
+
+
+</body>
+</html>

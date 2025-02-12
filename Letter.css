@@ -6,22 +6,22 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
-    
     .box1 { 
-        width: 100%;
-        max-width: 375px;
-        margin-top: 150px;
-        margin-left: 95px;
-        padding: 20px;
-        border-radius: 10px;
+        position: absolute; 
+        top: 30px;  /* Moves it down */
+        left: -150px;  /* Moves it to the right */ 
         font-family: 'Segoe UI Variable', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: white;
         font-size: 18px;
+        text-align: center;
+        margin-top: 20px; /* Adjust as needed */
     }
     .envelope img {
+        position: absolute; 
+        top: 300px;  /* Moves it down */
+        left: 20px;  /* Moves it to the right */ 
         max-width: 90%;
         height: auto;
-        display: block;
         margin: 0 auto;
 
         animation: rotateY 3s linear infinite;
@@ -36,24 +36,25 @@
         }
     }
     .openletter{
-        margin-top: 20px;
-        margin-left: 75px;
-        width: 200px;
-        height: 35px;
+        position: absolute; 
+        top: 500px;  /* Moves it down */
+        left: -5px;  /* Moves it to the right */ 
         background-color: #BC1E50;
         color: white;
         border: none;
-        border-radius: 60px;
-        font-size: 18px;
-        font-family: 'Segoe UI Variable', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border-radius: 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
     }
     .PopUp1{
-        background-color: white;
-        width: 300px;
-        height: 200px;
-        margin-left: 30px;
-        margin-top: 250px;
-        border-radius: 20px;
+            background-color: white;
+            width: 300px;
+            height: 200px;
+            border-radius: 20px;
+            position: absolute; 
+            top: -10px;  /* Moves it down */
+            left: -10px;  /* Moves it to the right */ 
     }
     .choice1{
         background-color: #BC1E50;
@@ -99,8 +100,9 @@
         color: white;
         width: 250px;
         height: 40px;
-        margin-left: 50px;
-        margin-top: 20px;
+        position: absolute; 
+        top: 380px;  /* Moves it down */
+        left: -10px;  /* Moves it to the right */
         border-radius: 10px;
         border: none;
         font-size: 18px;
@@ -174,6 +176,9 @@
     
     /* Parent container to keep them together */
     .container {
+        position: absolute; 
+        top: -5px;  /* Moves it down */
+        left: -10px;  /* Moves it to the right */ 
         margin-top: 15px;
         display: flex;
         flex-direction: column;
